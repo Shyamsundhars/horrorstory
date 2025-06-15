@@ -24,7 +24,6 @@ generation_config = {
 }
 
 #Initialize the generative model
-
 model = genai.GenerativeModel(
     model_name = "gemini-1.5-flash",
     generation_config = generation_config,
@@ -76,7 +75,6 @@ if st.button("Generate Story"):
             st.subheader("Your Horror Story:")
             st.write(story)
         except Exception as e:
-            #st.error(f"An error occurred: {e}")
             # Use traceback to get the line number and function
             exc_type, exc_value, exc_traceback = sys.exc_info()
             tb = traceback.extract_tb(exc_traceback)
